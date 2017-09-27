@@ -36,7 +36,7 @@ limitations under the License.
   <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
     <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
       <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
-        <h3>Firebase Cloud Messaging</h3>
+        <h3>Web Push Notification with Firebase Cloud Messaging</h3>
       </div>
     </div>
   </header>
@@ -63,8 +63,13 @@ limitations under the License.
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
                     onclick="requestPermission()">Request Permission</button>
           </div>
+
           <!-- div to display messages received by this app. -->
           <div id="messages"></div>
+        </div>
+
+          <div>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="open(location, '_self').close();">Close this Window</button>
         </div>
       </div>
 
@@ -278,6 +283,7 @@ limitations under the License.
   }
 
   resetUI();
+
 </script>
 </body>
 </html>
